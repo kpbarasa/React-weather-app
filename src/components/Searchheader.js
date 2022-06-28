@@ -6,17 +6,19 @@ const SearchHeader = ({onInput, query, search}) => {
      <div className="search-box">
           <input type= "text" 
           className="search-bar" 
-          autocomplete="off"
-          autocomplete="off" autocorrect="off" autocapitalize="on"
-          placeholder="Search Town, City or Country"
+         //  autocomplete="off" autocorrect="off" autocapitalize="on"
+          placeholder="Search: Countr, City, Town"
           onClick={e => onInput(e.target.value)} 
           onChange={e => onInput(e.target.value)}
-          value={query}
-          onKeyPress={search} /> 
-          <a className="btn bttn link text-light ml-4 d-none">
+          value={query} /> 
+          <button className="btn bttn link text-light ml-4 d-none">
              <FaInfoCircle />  Help
-          </a>
+          </button>
         </div> 
+        {/* <div className="d-flex justify-content-end pb-1"> */}
+           {/* <button className="btn bttn link text-muted ml-4"><FaTimes /> Clear</button> */}
+           {/* <button className="btn bttn link text-light ml-4"><FaInfoCircle /> Help</button> */}
+        {/* </div> */}
      </>
      );
 }
